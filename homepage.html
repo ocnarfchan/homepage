@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<link rel="stylesheet" type="text/css" href="homepage.css">
+	<title>Homepage</title>
+	<script>
+		function startTime() {
+		    var today = new Date();
+		    var h = today.getHours();
+			h = h + 1; /*daylight saving*/
+		    var m = today.getMinutes();
+		    m = checkTime(m);
+		    document.getElementById('time').innerHTML =
+		    h + ":" + m;
+		    var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		    return i;
+		}
+	</script>
+</head>
+<body onload="startTime()">
+	<div id="time"></div>
+	<div id="box">
+		<div class="cat">
+			<div class="category" style="margin-top: 20px">Entertain</div>
+			<ul>
+				<li><a href="https://www.youtube.com">Youtube</a></li>
+				<li><a href="https://play.spotify.com/browse">Spotify</a></li>
+				<li><a href="https://www.reddit.com">Reddit</a></li>
+				<li><a href="https://www.bbc.co.uk/iplayer">iPlayer</a></li>
+				<li><a href="https://www.tumblr.com/">Tumblr</a></li>
+				<li><a href="https://www.medium.com/">Medium</a></li>
+			</ul>
+		</div>
+		<div class="cat">
+			<div class="category">Learn</div>
+			<ul>
+				<li><a href="http://learnpythonthehardway.org/book">Python</a></li>
+				<li><a href="http://learnvimscriptthehardway.stevelosh.com">Vim</a></li>
+				<li><a href="https://linuxjourney.com">Linux</a></li>
+				<li><a href="https://www.codecademy.com/articles/">Codecademy</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/">MDN</a></li>
+				<li><a href="https:/en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			</ul>
+		</div>
+		<div class="cat">
+			<div class="category">News</div>
+			<ul>
+				<li><a href="https://www.bbc.co.uk/news">BBC</a></li>
+				<li><a href="http://www.independent.co.uk">Independent</a></li>
+			</ul>
+		</div>
+		<div class="cat">
+			<div class="category">Work</div>
+			<ul>
+				<li><a href="https://my.manchester.ac.uk">MyManchester</a></li>
+				<li><a href="https://mail.google.com/">Gmail</a></li>
+				<li><a href="https://mail.yahoo.com/">Yahoo</a></li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		<ul>
+			<li><a href="https://drive.google.com">Google Drive</a></li>
+			<li><a href="https://francoriginal.tumblr.com">FrancOriginal</a></li>
+		</ul>
+	</footer>
+</body>
+</html>
